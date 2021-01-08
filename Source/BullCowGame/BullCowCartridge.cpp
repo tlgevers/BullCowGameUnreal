@@ -19,10 +19,10 @@ void UBullCowCartridge::SetupGame()
 {
     TArray<FString> ValidWords;
 
-    for (int32 index = 0; index < Words.Num(); index++)
+    for (FString Word : Words)
     {
-        if (Words[index].Len() > 3 && IsIsogram(Words[index]) && Words[index].Len() < 5) {
-            ValidWords.Emplace(Words[index]);
+        if (Word.Len() > 3 && IsIsogram(Word) && Word.Len() < 5) {
+            ValidWords.Emplace(Word);
         }
     }
     
